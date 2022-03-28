@@ -18,7 +18,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import conexões.Conexão;
+import connectbanco.Conexão;
 
 public class TelaLogin extends JFrame {
 
@@ -65,12 +65,12 @@ public class TelaLogin extends JFrame {
 		contentPane.add(lblsenha);
 
 		tfuser = new JTextField();
-		tfuser.setBounds(97, 42, 103, 20);
+		tfuser.setBounds(97, 42, 121, 20);
 		contentPane.add(tfuser);
 		tfuser.setColumns(10);
 
 		tfsenha = new JPasswordField();
-		tfsenha.setBounds(97, 90, 103, 20);
+		tfsenha.setBounds(97, 90, 121, 20);
 		contentPane.add(tfsenha);
 
 		JButton btnNewButton = new JButton("Entrar");
@@ -80,7 +80,7 @@ public class TelaLogin extends JFrame {
 				try {
 					Connection con = Conexão.conecta_banco();
 
-					String sql = "select *from dados_senhas where user=? and senhas=?";
+					String sql = "Select *from dados_senhas where user=? and senhas=?";
 
 					PreparedStatement statemt = con.prepareStatement(sql);
 
@@ -113,7 +113,7 @@ public class TelaLogin extends JFrame {
 				}
 			}
 		});
-		btnNewButton.setBounds(111, 133, 67, 20);
+		btnNewButton.setBounds(111, 133, 89, 20);
 		contentPane.add(btnNewButton);
 
 	}
