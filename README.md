@@ -10,4 +10,4 @@ Bibliotecas
 
 ## 💻 Projeto
 
-CRUD em formato de aplicativo desktop para controle de usuários.
+CRUD em formato de aplicativo desktop para controle de usuários, com Login e senha verificados no banco.
